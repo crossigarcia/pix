@@ -9,14 +9,12 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '60vw',
-  height: '70vh',
+  height: 'auto',
   bgcolor: 'background.paper',
   border: 'none',
   borderRadius: '5px',
   boxShadow: 24,
-  p: 5,
-  display: 'flex',
-  justifyContent: 'flex-start'
+  p: 5
 };
 
 const PictureModal = (props) => {
@@ -29,8 +27,11 @@ const PictureModal = (props) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <div className="large-image-container">
+          <div className="modal-content">
              <img className="modal-img" src={props.imgSrc} alt={props.altText}></img>
+             <div className="modal-details">
+               <a href={props.link} className="modal-link" target="_blank" rel="noreferrer">Visit Pixabay to Download Image</a>
+             </div>
           </div>
         </Box>
       </Modal>

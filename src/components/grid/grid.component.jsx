@@ -12,7 +12,7 @@ const Grid = ({ error, isLoaded, hits}) => {
       return (
          <div className="grid-container">
             {hits.length ? hits.map(hit => {
-               return <GridItem key={hit.id} preview={hit.webformatURL} largeImg={hit.largeImageURL} altText={hit.tags}/>
+               return <GridItem key={hit.id} preview={hit.webformatURL} largeImg={hit.largeImageURL} altText={hit.tags} link={hit.pageURL}/>
             }) : (
                <div className="no-results">No Results</div>
             )}
