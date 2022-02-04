@@ -3,4 +3,26 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   .slider-container {
+      height: 20px;
+      width: 500px;
+      font-size: 10px;
+      margin-top: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .slider-label {
+         width: 155px;
+         font-size: 12px;
+         padding: 0;
+         margin: 0;
+         margin-right: 5px;
+         text-transform: uppercase;
+         color: #555;
+         letter-spacing: 1px;
+      }
+   }
 }
