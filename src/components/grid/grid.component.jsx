@@ -1,6 +1,6 @@
 import React from "react";
 import "./grid.styles.scss";
-import GridItem from "../card/grid-item.component";
+import GridItem from "../grid-item/grid-item.component";
 
 const Grid = ({ error, isLoaded, hits}) => {
    if (error) {
@@ -11,7 +11,7 @@ const Grid = ({ error, isLoaded, hits}) => {
       return (
          <div className="grid-container">
             {hits.length ? hits.map(hit => {
-               return <GridItem key={hit.id} preview={hit.previewURL}/>
+               return <GridItem key={hit.id} preview={hit.webformatURL} largeImg={hit.largeImageURL} altText={hit.tags}/>
             }) : (
                <div className="no-results">No Results</div>
             )}

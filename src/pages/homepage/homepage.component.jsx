@@ -20,7 +20,6 @@ class Homepage extends React.Component {
       fetch(`https://pixabay.com/api/?key=13882338-d93b145945134ef80bc1b14a3&q=${this.state.keyword}&image_type=photo&per_page=${this.state.itemsPerPage}`)
       .then(response => response.json())
       .then((result) => {
-         console.log(this.state.keyword);
          this.setState({
             hits: result.hits,
             isLoaded: true
@@ -42,7 +41,6 @@ class Homepage extends React.Component {
          //    fetch(`https://pixabay.com/api/?key=13882338-d93b145945134ef80bc1b14a3&q=${this.state.keyword}&image_type=photo&per_page=${this.state.itemsPerPage}`)
          //    .then(response => response.json())
          //    .then((result) => {
-         //       console.log(this.state.keyword);
          //       this.setState({
          //          hits: result.hits,
          //          isLoaded: true
@@ -63,7 +61,6 @@ class Homepage extends React.Component {
       fetch(`https://pixabay.com/api/?key=13882338-d93b145945134ef80bc1b14a3&q=${this.state.keyword}&image_type=photo&per_page=${this.state.itemsPerPage}`)
       .then(response => response.json())
       .then((result) => {
-         console.log(this.state.keyword);
          this.setState({
             hits: result.hits,
             isLoaded: true
