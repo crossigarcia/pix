@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./grid-item.styles.scss";
-import Modal from "../modal/modal.component";
+import PictureModal from "../modal/modal.component";
 
 const GridItem = ({ preview, largeImg, altText }) => {
    const [showModal, setShowModal] = useState(false);
@@ -14,7 +14,8 @@ const GridItem = ({ preview, largeImg, altText }) => {
          <div className="img-container" onClick={toggleModal}>
             <img src={preview} alt={altText} className="img"></img>
          </div>
-         <Modal showModal={showModal} toggleModal={toggleModal} imgSrc={largeImg} altText={altText}/>
+         
+         <PictureModal showModal={showModal} toggleModal={toggleModal} imgSrc={largeImg} altText={altText}/>
       </div>
    )
 };
