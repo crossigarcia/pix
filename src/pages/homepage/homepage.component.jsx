@@ -64,7 +64,7 @@ class Homepage extends React.Component {
       const { error, isLoaded, hits } = this.state;
       return (
          <div className="homepage">
-            <SearchBox handleChange={this.handleKeywordChange} onClick={this.fetchOnParamChange}/>
+            <SearchBox handleChange={this.handleKeywordChange} onClick={this.fetchData}/>
             <div className="slider-container">
                <p className="slider-label">Images per page</p>
                <Slider 
