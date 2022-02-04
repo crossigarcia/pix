@@ -1,12 +1,13 @@
 import React from "react";
 import "./grid.styles.scss";
 import GridItem from "../grid-item/grid-item.component";
+import LinearProgress from '@mui/material/LinearProgress';
 
 const Grid = ({ error, isLoaded, hits}) => {
    if (error) {
       return <div className="error">Error: {error.message}</div>
    } else if (!isLoaded) {
-      return <div className="loading">Loading...</div>
+      return <div className="loading"><LinearProgress color="secondary" /></div>
    } else {
       return (
          <div className="grid-container">

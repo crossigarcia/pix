@@ -6,3 +6,15 @@
    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
    gap: 20px;
 }
+
+.error {
+      margin-top: 50px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: red;
+}
+
+.loading {
+   width: 45vw;
+   margin-top: 50px;
+}

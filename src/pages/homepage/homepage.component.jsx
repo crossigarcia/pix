@@ -32,7 +32,9 @@ class Homepage extends React.Component {
             })
          })
       }) 
-      .catch(error => console.log("ERROR:", error));
+      .catch(error => {
+         console.log("ERROR:", error);
+      });
    }
 
    componentDidMount() {
