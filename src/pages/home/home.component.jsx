@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Grid from "../../components/grid/grid.component";
 import SearchBox from "../../components/search-box/search-box.component";
 import Slider from '@mui/material/Slider';
-import './homepage.styles.scss';
+import './home.styles.scss';
 
 const Home = () => {
    const [hits, setHits] = useState([]);
    const [isLoaded, setIsLoaded] = useState(false);
    const [error, setError] = useState(null);
    const [itemsPerPage, setItemsPerPage] = useState(10);
-   const [keyword, setKeyword] = useState("");
+   const [keyword, setKeyword] = useState("red");
 
    const fetchData = () => {
       fetch(`https://pixabay.com/api/?key=13882338-d93b145945134ef80bc1b14a3&q=${keyword}&image_type=photo&per_page=${itemsPerPage}`)
