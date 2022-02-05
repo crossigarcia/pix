@@ -11,7 +11,7 @@ const Home = () => {
    const [itemsPerPage, setItemsPerPage] = useState(10);
    const [keyword, setKeyword] = useState("red");
 
-   const fetchData = () => {
+   useEffect(() => {
       fetch(`https://pixabay.com/api/?key=13882338-d93b145945134ef80bc1b14a3&q=${keyword}&image_type=photo&per_page=${itemsPerPage}`)
       .then(response => response.json())
       .then((result) => {
@@ -22,9 +22,7 @@ const Home = () => {
          console.log("ERROR:", error);
          setError(`An error ocurred, please try again. ${error}`);
       });
-   }
-
-   useEffect(() => {fetchData()}, [keyword, itemsPerPage]);
+   }, [keyword, itemsPerPage]);
 
    const handleKeywordChange = (event) => {
       event.preventDefault();
@@ -38,7 +36,7 @@ const Home = () => {
 
    return (
       <div className="homepage">
-            <SearchBox handleChange={handleKeywordChange} onClick={fetchData}/>
+            <SearchBox handleChange={handleKeywordChange}/>
             <div className="slider-container">
                <p className="slider-label">Images per page</p>
                <Slider 
